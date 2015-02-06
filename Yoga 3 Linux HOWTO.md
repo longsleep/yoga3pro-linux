@@ -1,7 +1,7 @@
 Installing Ubuntu 14.10 on Yoga 3 Pro
 =====================================
 
-With this intructions you get a Ubuntu 14.10 on a Yoga 3 Pro from Leono in full SecureBoot enabled UEFI mode. This means dual boot to Windows 8 works just fine. When you turn on the Yoga Grub will greet you and you can Choose to boot Ubuntu (the default) or Windows.
+With this intructions you get a Ubuntu 14.10 on a Yoga 3 Pro from Leono in full Secure Boot enabled UEFI mode. This means dual boot to Windows 8 works just fine. When you turn on the Yoga Grub will greet you and you can choose to boot Ubuntu (the default) or Windows.
 
 # Create recovery USB flash drive
 
@@ -178,4 +178,5 @@ Some things you should do after installing Ubuntu to get the most out of your in
 
 Have fun with the Yoga 3 Pro on Linux.
 
+--
 Simon Eisenmann
