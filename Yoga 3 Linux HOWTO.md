@@ -1,4 +1,5 @@
 Installing Ubuntu 14.10 on Yoga 3 Pro
+=====================================
 
 With this intructions you get a Ubuntu 14.10 on a Yoga 3 Pro from Leono in full SecureBoot enabled UEFI mode. This means dual boot to Windows 8 works just fine. When you turn on the Yoga Grub will greet you and you can Choose to boot Ubuntu (the default) or Windows.
 
@@ -76,27 +77,27 @@ Prepare a flash dive with Ubuntu 14.10 or later image. Use the Novo button to ge
 
 3. Test Ubuntu to see if everything works
 
-    1. Check touchpad (works)
+    - Check touchpad (works)
 
-    2. Check touchscreen (works)
+    - Check touchscreen (works)
 
-    3. Check keyboard (works)
+    - Check keyboard (works)
 
-    4. Check screen dim (works)
+    - Check screen dim (works)
 
-    5. Check audio (works)
+    - Check audio (works)
 
-    6. Check wifi (not working)
+    - Check wifi (not working)
 
 # Wifi
 
-Wifi is not working out of the box as it needs a driver. The chip is a BCM4352 from Broadcom. To get Wifi working just install "bcmwl-kernel-source" which is available on the installation image.
+Wifi is not working out of the box as it needs a driver. The chip is a BCM4352 from Broadcom. To get Wifi working just install ´bcmwl-kernel-source´ which is available on the installation image.
 
-sudo apt-get install bcmwl-kernel-source
+	sudo apt-get install bcmwl-kernel-source
 
 After that the module should be compiled and loaded. Check with dmesg (wlan0 should appear). We now have a wifi0 interface but it is blocked by hardware switch. This is because the ideapad-laptop module is broken in the default kernel and needs a patch ([http://ubuntuforums.org/showthread.php?t=2215044](http://ubuntuforums.org/showthread.php?t=2215044)) as the Yoga’s do not have Wifi kill switches. So remove it for now.
 
-sudo modprobe -r ideapad_laptop
+	sudo modprobe -r ideapad_laptop
 
 Voila, wifi suddenly works like a charm and you can connect to Wifi using network manager. To make this persistent, add the module to the blacklist.
 
@@ -104,7 +105,7 @@ Voila, wifi suddenly works like a charm and you can connect to Wifi using networ
 
 # Install Ubuntu 14.10
 
-Make sure you have booted with EFI by checking if /sys/firmware/efi exists. Do not continue if it does not exist and reboot in EFI mode (Dual boot). Ubuntu can be installed now on the SSD just fine. Click on Install Ubuntu and make the following selections:
+Make sure you have booted with EFI by checking if ´/sys/firmware/efi´ exists. Do not continue if it does not exist and reboot in EFI mode (Dual boot). Ubuntu can be installed now on the SSD just fine. Click on Install Ubuntu and make the following selections:
 
 1. Something else (As we want full disk encryption)
 
@@ -124,15 +125,15 @@ Make sure you have booted with EFI by checking if /sys/firmware/efi exists. Do n
 
 Wait until the system is installed. This should take around 5 minutes. When done, restart the system. It did not reboot for me .. so hard reset.
 
-The system should now boot into Grub. There is a option to boot into Windows there too - so test this first (works). Then restart and boot into Ubuntu.
+The system should now boot into Grub. There is a option to boot into Windows there too - so test this first (works). Then restart and boot into Ubuntu.
 
 Remember that the Wifi will not work, until the drivers are installed. So install them by accessing the installation USB drive again.
 
 1. Mount USB installation image from Files
 
-2. Install dkms from pool/main/d/dkms
+2. Install dkms from ´ool/main/d/dkms´
 
-3. Install bcmwl-kernel-source from pool/restricted/b/bcmwl
+3. Install bcmwl-kernel-source from ´pool/restricted/b/bcmwl´
 
 4. Blacklisting is not required anymore, as the problem was fixed in Kernel 3.16.0-29 - check with "rfkill list all"
 
@@ -140,7 +141,7 @@ Voila - we are complete.
 
 # HiDPI support
 
-Ubuntu supports scaling up the Unity interface in System Settings -> Displays. I use 1.5 as scale factor. In Firefox, go to about:config and set layout.css.devPixelsPerPx to 2.
+Ubuntu supports scaling up the Unity interface in System Settings -> Displays. I use 1.5 as scale factor. In Firefox, go to about:config and set ´layout.css.devPixelsPerPx´ to 2.
 
 # Dual screen / external display
 
@@ -150,13 +151,10 @@ The external display works out of the box, including 4K support through the micr
 
 TLP is an adwanced power management tool for Linux that automatically handles settings and tweaks to enhance the battery live. It does not have a GUI and just runs in the background.
 
-sudo apt-add-repository ppa:linrunner/tlp
-
-sudo apt-get update
-
-sudo apt-get install tlp tlp-rdw smartmontools ethtool powertop
-
-sudo tlp start
+	sudo apt-add-repository ppa:linrunner/tlp
+	sudo apt-get update
+	sudo apt-get install tlp tlp-rdw smartmontools ethtool powertop
+	sudo tlp start
 
 # Known issues
 
@@ -172,9 +170,12 @@ Some things you should do after installing Ubuntu to get the most out of your in
 
 * Turn off the online search. Open System Settings and head to Security & Privacy. In the Search tab turn off the online search results.
 
-* Install restricted extras "sudo apt-get install ubuntu-restricted-extras".
+* Install restricted extras ´sudo apt-get install ubuntu-restricted-extras´.
 
-* Remove Apport "sudo apt-get remove apport" to avoid leaking private information / turns of bug reports.
+* Remove Apport ´sudo apt-get remove apport´ to avoid leaking private information / turns of bug reports.
 
-* Install tweak tools "sudo apt-get install unity-tweak-tooll". Use the Unity tweak tool to enable multiple desktops (i use 3x3).
+* Install tweak tools ´sudo apt-get install unity-tweak-tool´. Use the Unity tweak tool to enable multiple desktops (i use 3x3).
 
+Have fun with the Yoga 3 Pro on Linux.
+
+Simon Eisenmann
