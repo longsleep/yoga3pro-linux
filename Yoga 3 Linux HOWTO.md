@@ -91,7 +91,7 @@ Prepare a flash dive with Ubuntu 14.10 or later image. Use the Novo button to ge
 
 # Wifi
 
-Wifi is not working out of the box as it needs a driver. The chip is a BCM4352 from Broadcom. To get Wifi working just install ´bcmwl-kernel-source´ which is available on the installation image.
+Wifi is not working out of the box as it needs a driver. The chip is a BCM4352 from Broadcom. To get Wifi working just install 'bcmwl-kernel-source' which is available on the installation image.
 
 	sudo apt-get install bcmwl-kernel-source
 
@@ -105,7 +105,7 @@ Voila, wifi suddenly works like a charm and you can connect to Wifi using networ
 
 # Install Ubuntu 14.10
 
-Make sure you have booted with EFI by checking if ´/sys/firmware/efi´ exists. Do not continue if it does not exist and reboot in EFI mode (Dual boot). Ubuntu can be installed now on the SSD just fine. Click on Install Ubuntu and make the following selections:
+Make sure you have booted with EFI by checking if '/sys/firmware/efi' exists. Do not continue if it does not exist and reboot in EFI mode (Dual boot). Ubuntu can be installed now on the SSD just fine. Click on Install Ubuntu and make the following selections:
 
 1. Something else (As we want full disk encryption)
 
@@ -131,9 +131,9 @@ Remember that the Wifi will not work, until the drivers are installed. So instal
 
 1. Mount USB installation image from Files
 
-2. Install dkms from ´ool/main/d/dkms´
+2. Install dkms from 'ool/main/d/dkms'
 
-3. Install bcmwl-kernel-source from ´pool/restricted/b/bcmwl´
+3. Install bcmwl-kernel-source from 'pool/restricted/b/bcmwl'
 
 4. Blacklisting is not required anymore, as the problem was fixed in Kernel 3.16.0-29 - check with "rfkill list all"
 
@@ -141,7 +141,7 @@ Voila - we are complete.
 
 # HiDPI support
 
-Ubuntu supports scaling up the Unity interface in System Settings -> Displays. I use 1.5 as scale factor. In Firefox, go to about:config and set ´layout.css.devPixelsPerPx´ to 2.
+Ubuntu supports scaling up the Unity interface in System Settings -> Displays. I use 1.5 as scale factor. In Firefox, go to about:config and set 'layout.css.devPixelsPerPx' to 2.
 
 # Dual screen / external display
 
@@ -170,11 +170,11 @@ Some things you should do after installing Ubuntu to get the most out of your in
 
 * Turn off the online search. Open System Settings and head to Security & Privacy. In the Search tab turn off the online search results.
 
-* Install restricted extras ´sudo apt-get install ubuntu-restricted-extras´.
+* Install restricted extras 'sudo apt-get install ubuntu-restricted-extras'.
 
-* Remove Apport ´sudo apt-get remove apport´ to avoid leaking private information / turns of bug reports.
+* Remove Apport 'sudo apt-get remove apport' to avoid leaking private information / turns of bug reports.
 
-* Install tweak tools ´sudo apt-get install unity-tweak-tool´. Use the Unity tweak tool to enable multiple desktops (i use 3x3).
+* Install tweak tools 'sudo apt-get install unity-tweak-tool'. Use the Unity tweak tool to enable multiple desktops (i use 3x3).
 
 Have fun with the Yoga 3 Pro on Linux.
 
