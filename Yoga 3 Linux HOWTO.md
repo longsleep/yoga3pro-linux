@@ -1,7 +1,7 @@
 Installing Ubuntu 14.10 on Yoga 3 Pro
 =====================================
 
-With this intructions you get a Ubuntu 14.10 on a Yoga 3 Pro from Leono in full Secure Boot enabled UEFI mode. This means dual boot to Windows 8 works just fine. When you turn on the Yoga Grub will greet you and you can choose to boot Ubuntu (the default) or Windows.
+With this intructions you get a Ubuntu 14.10 on a Yoga 3 Pro from Leonvo with full Secure Boot enabled UEFI mode. This means dual boot to Windows 8 works just fine. When you turn on the Yoga Grub will greet you and you can choose to boot Ubuntu (the default) or Windows.
 
 # Create recovery USB flash drive
 
@@ -163,6 +163,10 @@ TLP is an adwanced power management tool for Linux that automatically handles se
 * GPU sometimes hangs after resume - X is dead
 
 * HiDPI with external displays is a little flaky and can result in strange redraw issues
+
+* Camera quality is terrible and blurry / Does not seem to be able to record 1080p.
+
+* Fan does run all the time at low speed. No way to read fan speed nor control it.
 
 # Extra steps after installing Ubuntu
 
