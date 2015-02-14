@@ -91,7 +91,7 @@ Prepare a flash dive with Ubuntu 14.10 or later image. Use the Novo button to ge
 
 # Wifi
 
-Wifi is not working out of the box as it needs a driver. The chip is a BCM4352 from Broadcom. To get Wifi working just install 'bcmwl-kernel-source' which is available on the installation image.
+Wifi is not working out of the box as it needs a proprietary driver. The chip is a BCM4352 from [Broadcom](http://www.broadcom.com/support/802.11/linux_sta.php). To get Wifi working just install 'bcmwl-kernel-source' Ubuntu package is available on the installation image. This package bundles the Broadcom proprietary binary driver as DKMS module.
 
 	sudo apt-get install bcmwl-kernel-source
 
@@ -99,9 +99,7 @@ After that the module should be compiled and loaded. Check with dmesg (wlan0 sho
 
 	sudo modprobe -r ideapad_laptop
 
-Voila, wifi suddenly works like a charm and you can connect to Wifi using network manager. To make this persistent, add the module to the blacklist.
-
-	sudo echo "blacklist ideapad_laptop" > /etc/modprobe.d/blacklist-yoga3.conf
+Voila, wifi suddenly works like a charm and you can connect to Wifi using network manager. The problem has been fixed in later Kernel revisions - so the fix above is only required when installing.
 
 # Install Ubuntu 14.10
 
@@ -169,6 +167,8 @@ TLP is an adwanced power management tool for Linux that automatically handles se
 * Fan does run all the time at low speed. No way to read fan speed nor control it.
 
 * Kernel 3.16.0-30 has some issues with the Broadwell GPU platform. Kernel 3.18 or 3.19 should improve the situation. See http://www.phoronix.com/scan.php?page=news_item&px=MTc1ODg and http://www.phoronix.com/scan.php?page=news_item&px=MTc1ODM for details.
+
+* Broadcom Wifi driver is not open source and needs patches to compile with latest Kernels (3.17 or later).
 
 # Extra steps after installing Ubuntu
 
