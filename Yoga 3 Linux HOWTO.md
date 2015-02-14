@@ -168,6 +168,8 @@ TLP is an adwanced power management tool for Linux that automatically handles se
 
 * Fan does run all the time at low speed. No way to read fan speed nor control it.
 
+* Kernel 3.16.0-30 has some issues with the Broadwell GPU platform. Kernel 3.18 or 3.19 should improve the situation. See http://www.phoronix.com/scan.php?page=news_item&px=MTc1ODg and http://www.phoronix.com/scan.php?page=news_item&px=MTc1ODM for details.
+
 # Extra steps after installing Ubuntu
 
 Some things you should do after installing Ubuntu to get the most out of your installation.
@@ -181,6 +183,12 @@ Some things you should do after installing Ubuntu to get the most out of your in
 * Install tweak tools 'sudo apt-get install unity-tweak-tool'. Use the Unity tweak tool to enable multiple desktops (i use 3x3).
 
 Have fun with the Yoga 3 Pro on Linux.
+
+# More things to investigate
+
+* Own the platform by adding own platform key for UEFI secure boot
+
+* Intel DPTF drivers (check out for Chromium OS)
 
 --
 Simon Eisenmann
