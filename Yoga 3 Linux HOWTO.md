@@ -170,6 +170,8 @@ TLP is an adwanced power management tool for Linux that automatically handles se
 
 * Broadcom Wifi driver is not open source and needs patches to compile with latest Kernels (3.17 or later).
 
+* Thermald automatic configuration is buggy and returns all kind of unsupported zones. Thus thermald does not do anything useful. Do not use it for now.
+
 # Extra steps after installing Ubuntu
 
 Some things you should do after installing Ubuntu to get the most out of your installation.
