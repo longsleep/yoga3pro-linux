@@ -173,9 +173,11 @@ TLP is an adwanced power management tool for Linux that automatically handles se
 
 * GPU sometimes hangs after resume because of bugs in the Intel platform drivers.
 
+* The Intel platform drivers has bugs and has issues with redrawing or refreshing certain areas of the screen which results in crippled text.
+
 * HiDPI with external displays is a little flaky and can result in strange redraw issues. Also the Intel platform driver.
 
-* Camera quality is terrible and blurry. The camera is just this bad - it actuallly a shame to put such a shitty camera into this device. It also does only do 720p max.
+* Camera quality is terrible and blurry. The camera is just this bad - it actually a shame to put such a crappy camera into a device with pro in its name. It also does only do 720p max.
 
 * Fan does run all the time at low speed. No way to read fan speed nor control it.
 
