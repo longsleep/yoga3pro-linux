@@ -137,6 +137,19 @@ Remember that Wifi will not work, until the drivers are installed. Luckily the d
 
 Voila - we are complete.
 
+# Bluetooth Firmware
+
+The firmware for the Bluetooth controller is not available in the Linux firmware package. We can create the firmware from the existing Windows driver. So mount the Windows partition and search for BCM20702A1_001.002.014.1443.1572.hex. This is the file we have to convert to a binary HCD file to be loaded by the Linux Kernel. Fortunately there is the tool [hex2hcd](https://github.com/jessesung/hex2hcd) for this.
+
+	git clone https://github.com/jessesung/hex2hcd.git
+	cd hex2hcd
+	make
+	./hex2hcd BCM20702A1_001.002.014.1443.1572.hex BCM20702A0-0489-e07a.hcd
+	sudo cp BCM20702A0-0489-e07a.hcd /lib/firmware/brcm
+	reboot
+
+Now you can enable Bluetooth from the tray icon. To check in the terminal, run `hciconfig dev`. Your device will appear there as UP.
+
 # HiDPI support
 
 Ubuntu supports scaling up the Unity interface in System Settings -> Displays. I use 1.5 as scale factor. In Firefox, go to about:config and set 'layout.css.devPixelsPerPx' to 2.
@@ -169,6 +182,8 @@ TLP is an adwanced power management tool for Linux that automatically handles se
 * Kernel 3.16.0-30 has some issues with the Broadwell GPU platform. Kernel 3.18 or 3.19 should improve the situation. See [here](http://www.phoronix.com/scan.php?page=news_item&px=MTc1ODg) and [here](http://www.phoronix.com/scan.php?page=news_item&px=MTc1ODM) for details. I started building my own Kernel - see the instructions at https://github.com/longsleep/linux_patches/tree/yoga3pro
 
 * Broadcom Wifi driver is not open source and needs patches to compile with latest Kernels (3.17 or later).
+
+* Bluetooth firmare is not available directly and needs to be converted from Windows.
 
 * Thermald automatic configuration is buggy and returns all kind of unsupported zones. Thus thermald does not do anything useful. Do not use it for now.
 
