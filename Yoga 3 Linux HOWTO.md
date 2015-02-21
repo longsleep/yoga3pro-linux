@@ -171,9 +171,7 @@ TLP is an adwanced power management tool for Linux that automatically handles se
 
 * Sometimes hangs on shutdown / reboot. This happens with Windows too and seems to be fixed by upgrading the Yoga 3 to the latest firmware.
 
-* GPU sometimes hangs after resume because of bugs in the Intel platform drivers.
-
-* The Intel platform drivers has bugs and has issues with redrawing or refreshing certain areas of the screen which results in crippled text.
+* Intel platform drivers have various issues. So the rule is to get the newest ones available. This involves installing the [latest Intel GPU drivers](https://01.org/linuxgraphics/downloads) which are not directly available for Ubuntu 14.10 yet and manually installing the xserver-xorg-video-intel package from Ubuntu 15.04 (Vivid). This helps to improve the overall experience.
 
 * HiDPI with external displays is a little flaky and can result in strange redraw issues. Also the Intel platform driver.
 
