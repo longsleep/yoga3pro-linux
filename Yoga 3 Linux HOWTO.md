@@ -201,6 +201,34 @@ Some things you should do after installing Ubuntu to get the most out of your in
 
 Have fun with the Yoga 3 Pro on Linux.
 
+# My result / recommendation
+
+For me the Yoga 3 Pro did not not work. I stopped using it. It was mostly the keyboard, the constant fan noise and CPU speed.
+
+### Pro's
+
+  + Awesome SSD with 512GB at lighning speed.
+  + Nice HiDPI screen.
+  + 2 USB3 connectors.
+  + Long battery life.
+  + Secure boot.
+  + Very thin and light.
+
+### Con's
+
+  - Constant fan noise.
+  - Thermal design is a fail. CPU gets hot quickly and thus is slow. Too slow.
+  - Keyboard layout and feeling is very bad for me. I cannot type on this thing.
+  - Very bad camera.
+  - Intel platform drivers have all kinds of issues.
+  - No drivers for advances power and battery settings on Linux.
+  - Wifi driver is not open source / in standard kernel.
+  - Quite large / wide.
+  - Touchpad clicks too easy.
+  - Large USB charging plug on the left.
+  - Hard to open, essentially two hands required.
+
+
 # More things to investigate
 
 * Own the platform by adding own platform key for UEFI secure boot
