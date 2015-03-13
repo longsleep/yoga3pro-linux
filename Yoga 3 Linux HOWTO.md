@@ -207,7 +207,7 @@ For me the Yoga 3 Pro did not not work. I stopped using it. It was mostly the ke
 
 ### Pro's
 
-  + Awesome SSD with 512GB at lighning speed.
+  + Awesome SSD with 512GB at lightning speed.
   + Nice HiDPI screen.
   + 2 USB3 connectors.
   + Long battery life.
