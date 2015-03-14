@@ -224,7 +224,7 @@ For me the Yoga 3 Pro did not not work. I stopped using it. It was mostly the ke
   - Thermal design is a fail. CPU gets hot quickly and thus is slow. Too slow.
   - Keyboard layout and feeling is very bad for me. I cannot type on this thing.
   - Very bad camera.
-  - Intel platform drivers have all kinds of issues.
+  - Intel platform drivers have all kinds of issues. See [known issues](https://01.org/linuxgraphics/downloads/2014/2014q4-intel-graphics-stack-release). Lets hope it improves with the first 2015 release.
   - No drivers for advances power and battery settings on Linux.
   - Wifi driver is not open source / in standard kernel.
   - Quite large / wide.
