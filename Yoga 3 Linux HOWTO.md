@@ -201,6 +201,10 @@ Some things you should do after installing Ubuntu to get the most out of your in
 
 Have fun with the Yoga 3 Pro on Linux.
 
+# Use Kernel 4.0
+
+I recommend to run the Yoga 3 Pro with the latest available Linux Kernel as 4.0 brings lots of hanges and improvements for the Intel platform. I have a Kernel pachtes tree and configuration for Yoga 3 Pro in [my Kernel patches](https://github.com/longsleep/linux_patches/tree/yoga3pro) repository. Please note that this requires to compile the Wifi driver as well, so it is compatible with Kernel 4.0.
+
 # My result / recommendation
 
 For me the Yoga 3 Pro did not not work. I stopped using it. It was mostly the keyboard, the constant fan noise and CPU speed.
