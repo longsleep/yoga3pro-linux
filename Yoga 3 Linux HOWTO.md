@@ -160,7 +160,7 @@ The external display works out of the box, including 4K support through the micr
 
 # Improve battery life
 
-TLP is an adwanced power management tool for Linux that automatically handles settings and tweaks to enhance the battery live and power saving. It does not have a GUI and just runs in the background.
+TLP is an advanced power management tool for Linux that automatically handles settings and tweaks to enhance the battery live and power saving. It does not have a GUI and just runs in the background.
 
 	sudo apt-add-repository ppa:linrunner/tlp
 	sudo apt-get update
