@@ -167,15 +167,17 @@ TLP is an advanced power management tool for Linux that automatically handles se
 	sudo apt-get install tlp tlp-rdw smartmontools ethtool powertop
 	sudo tlp start
 
-## Tweak Grub boot settings
+## Generic Linux kernel tweaks: Modifying Grub boot config
 
-This increases battery life considerably, apparently.  Edit your grub config to reflect the following:
+Linux kernel has a power regression problem.  See http://www.phoronix.com/scan.php?page=article&item=intel_i915_power 
+
+This fix tweaks the Grub bootloader and helps extend battery life.  Edit your grub config as follow:
 
     $ sudo vim /etc/default/grub
 
 Replace `GRUB_CMDLINE_LINUX_DEFAULT`:
 
-    #GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+    # GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
     GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm i915.lvds_downclock=1 i915.i915_enable_rc6=1 i915.i915_enable_fbc=1"
 
 Sync Grub
@@ -183,15 +185,6 @@ Sync Grub
     $ sudo update-grub
     $ sudo reboot
 
-
-## Downgrade to Unity 2D
-
-Saves 1-2W of battery life.  Hovers around 9-10W after downgrading.
-
-*****NOTE: Replaces Unity 3D with 2D equivalent**
-
-    $ sudo apt-get install unity-2d 
-    $ sudo reboot
 
 # Known issues
 
