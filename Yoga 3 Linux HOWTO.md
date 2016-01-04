@@ -206,6 +206,8 @@ Sync Grub
 
 * Thermald automatic configuration is buggy and returns all kind of unsupported zones. Thus thermald does not do anything useful. Do not use it for now.
 
+* Static noise in headphone jack when rebooting from Windows. Can be avoided by doing a complete shutdown instead of reboot.
+
 # Extra steps after installing Ubuntu
 
 Some things you should do after installing Ubuntu to get the most out of your installation.
