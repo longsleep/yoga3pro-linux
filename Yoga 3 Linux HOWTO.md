@@ -1,7 +1,7 @@
 Installing Ubuntu 14.10 on Yoga 3 Pro
 =====================================
 
-With this intructions you get a Ubuntu 14.10 on a Yoga 3 Pro from Leonvo with full Secure Boot enabled UEFI mode. This means dual boot to Windows 8 works just fine. When you turn on the Yoga Grub will greet you and you can choose to boot Ubuntu (the default) or Windows. All relevant components work good enough to use this platform as your main on the go workstation including Wifi, Bluetooth, touch pad and touch screen.
+With this intructions you get a Ubuntu 14.10 (KoljaWindeler: Or LinuxMint 17.10) on a Yoga 3 Pro from Leonvo with full Secure Boot enabled UEFI mode. This means dual boot to Windows 8 (KoljaWindeler: And Windows 10) works just fine. When you turn on the Yoga Grub will greet you and you can choose to boot Ubuntu (the default) or Windows. All relevant components work good enough to use this platform as your main on the go workstation including Wifi, Bluetooth, touch pad and touch screen.
 
 # Create recovery USB flash drive
 
@@ -95,7 +95,10 @@ Wifi is not working out of the box as it needs a proprietary driver. The chip is
 
 	sudo apt-get install bcmwl-kernel-source
 
-After that the module should be compiled and loaded. Check with dmesg (wlan0 should appear). We now have a wifi0 interface but it is blocked by hardware switch. This is because the ideapad-laptop module is broken in the default kernel and needs a patch ([http://ubuntuforums.org/showthread.php?t=2215044](http://ubuntuforums.org/showthread.php?t=2215044)) as the Yoga’s do not have Wifi kill switches. Eventually there will be a Ubuntu installer image with a fixed Kernel, but for now just remove the module.
+ (KoljaWindeler: e.g. Connect your Android phone, enable WiFi and USB tethering and plug it into the yoga. You're online within no-time.) After that the module should be compiled and loaded. Check with dmesg (wlan0 should appear). 
+ 
+On Ubuntu 14.10 but not on Linux Mint 17.10:
+ We now have a wifi0 interface but it is blocked by hardware switch. This is because the ideapad-laptop module is broken in the default kernel and needs a patch ([http://ubuntuforums.org/showthread.php?t=2215044](http://ubuntuforums.org/showthread.php?t=2215044)) as the Yoga’s do not have Wifi kill switches. Eventually there will be a Ubuntu installer image with a fixed Kernel, but for now just remove the module.
 
 	sudo modprobe -r ideapad_laptop
 
@@ -139,6 +142,8 @@ Voila - we are complete.
 
 # Bluetooth Firmware
 
+ (KoljaWindeler: The Bluetooth will work out-of-the-box on LinuxMint 17.10)
+ 
 The firmware for the Bluetooth controller is not available in the Linux firmware package. We can create the firmware from the existing Windows driver. So mount the Windows partition and search for BCM20702A1_001.002.014.1443.1572.hex. This is the file we have to convert to a binary HCD file to be loaded by the Linux Kernel. Fortunately there is the tool [hex2hcd](https://github.com/jessesung/hex2hcd) for this.
 
 	git clone https://github.com/jessesung/hex2hcd.git
@@ -153,6 +158,7 @@ Now you can enable Bluetooth from the tray icon. To check in the terminal, run `
 # HiDPI support
 
 Ubuntu supports scaling up the Unity interface in System Settings -> Displays. I use 1.5 as scale factor. In Firefox, go to about:config and set 'layout.css.devPixelsPerPx' to 2.
+ (KoljaWindeler: Linux Mint 17.10 -> system settings -> general -> select HDPI and REBOOT!)
 
 # Dual screen / external display
 
